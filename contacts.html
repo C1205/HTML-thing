@@ -50,17 +50,28 @@
 		<!-- Key section -->
 		<form class="container py-3">
 			<div class="row gy-3">
-				<!-- Label: Name*
-						 Text Input field -->
+				<div class="col">
+					<label name="name">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="E.g. John Doe" required/>
+				</div>
+			    <div class="col">
+					<label name="email">Email <span class="text-danger">*</span></label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="E.g. frenchbaguette@gmail.com" required/>
+				</div>
+			</div>
 
-				<!-- Label: Email Address*
-						 Email Input field -->
-
-				<!-- Label: Subject*
-						 Text Input field with placeholder text "Enquiry on how to code"-->
-
-				<!-- Label: Subject*
-						 Textarea field with the row attribute of value 5-->
+			<div class="row gy-3 mt-2">
+				<div class="col">
+					<label name="subject">Subject <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="E.g. HTML and CSS" required/>
+				</div>
+			</div>
+		    <div class="row gy-3 mt-3"></div>
+				<div class="col">
+					<label name="message">Message <span class="text-danger">*</span></label>
+                    <textarea type="text" class="form-control" id="message" rows=5></textarea>
+				</div>
+			<button type="button" class="btn btn-primary">Submit</button>
 			</div>
 			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>

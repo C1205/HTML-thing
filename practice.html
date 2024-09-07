@@ -136,7 +136,45 @@
       </tr>
     </tbody>
   </table>
+  <form>
+    <div class="row">
+      <div class="col">
+        <label name="fName">First Name</label>
+        <input type="text" class="form-control" id="fName" name="fName" placeholder="E.g. John">
+        <p class="d-none text-danger" id="fNameError">Invalid Name</p>
+      </div>
+      <div class="col">
+      <label name="lName">Last Name</label>
+        <input type="text" class="form-control" id="lName" name="lName" placeholder="E.g. Doe">
+      </div>
+
+    <div class="row">
+      <div class="col">
+        <label name="contact">Contact</label>
+        <input type="number" class="form-control" id="contact" name="contact" placeholder="E.g. 98765432">
+      </div>
+    <div class="row">
+      <div class="col">
+        <label name="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="E.g. hotcorndog@gmail.com">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" id="submitBtn" onclick="validate()">Submit</button>
+  </form>
   <script>
+    let validate = () => {
+      let fName = document.getElementById("fName");
+      let errorMsg = document.getElementById("fNameError");
+    if (fName.value.length != 0) {
+      fName.classList = "form-control";
+      errorMsg.classList = "d-none text-danger";
+    }
+    else{
+      fName.classList = "form-control is-invalid";
+      errorMsg.classList = "text-danger";
+      console.log("Nice :)")
+    };
+  };
     let message = "Hello World";
     console.log(message);
     console.warn(message);
@@ -162,7 +200,15 @@
     else {
       console.log("ITS ZEROOOO");
     }
-  </script>
+    let fName = document.getElementById("fName");
+    if (fName.value.length != 0) {
+      fName.classList = "form-control"
+      document.getElementById("fNameError")
+    }
+    let LName = document.getElementById("LName");
+    let contact = document.getElementById("contact");
+    let email = document.getElementById("email");
 
+  </script>
   </body>
 </html>
