@@ -53,10 +53,12 @@
 				<div class="col">
 					<label name="name">Name <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="E.g. John Doe" required/>
+					<p class="d-none text-danger" id="nameError">Invaild Name</p>
 				</div>
 			    <div class="col">
 					<label name="email">Email <span class="text-danger">*</span></label>
 					<input type="email" class="form-control" id="email" name="email" placeholder="E.g. frenchbaguette@gmail.com" required/>
+					<p class="d-none text-danger" id="emailError">Invaild Email</p>
 				</div>
 			</div>
 
@@ -64,19 +66,21 @@
 				<div class="col">
 					<label name="subject">Subject <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="subject" name="subject" placeholder="E.g. HTML and CSS" required/>
+					<p class="d-none text-danger" id="subjectError">Invaild Subject</p>
 				</div>
 			</div>
 		    <div class="row gy-3 mt-3"></div>
 				<div class="col">
 					<label name="message">Message <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="message" rows=5></textarea>
+					<p class="d-none text-danger" id="MsgError">Invaild Message</p>
 				</div>
-			<button type="button" class="btn btn-primary">Submit</button>
+			<button type="button" class="btn btn-primary" id="submitBtn" onclick="validate()">Submit</button>
 			</div>
 			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
 	</article>
 	<!-- End of coding region -->
-	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
+	<footer class="bg-dark text-light"><div class="container py-2 pb-4">All rights reserved@ByteBustersClub</div></footer>
 </body>
 </html>
