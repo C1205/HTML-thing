@@ -7,7 +7,6 @@
 	<title>Byte Buster Coding Club</title>
 	<script src="script/jquery.min.js"></script>
 	<script src="script/bootstrap.js"></script>
-	<script src="script/projects.js"></script>
 	<link href="script/bootstrap.css" rel="stylesheet" />
 	<link href="img/favicon-bbcc.png" rel="icon" />
 	<link href="script/projects.css" rel="stylesheet" />
@@ -54,31 +53,26 @@
 		<!-- Key section -->
 		<div class="container py-3 pb-4">
 			<ul class="nav nav-pills">
-				<li class="nav-item"><button class="nav-link rounded-pill active" data-bs-target="#scratch"
+				<li class="nav-item"><button class="nav-link rounded-pill active" data-bs-target="#HTML"
+					data-bs-toggle="pill">HTML Canvas projects</button></li>
+				<li class="nav-item"><button class="nav-link rounded-pill" data-bs-target="#scratch"
 						data-bs-toggle="pill">Scratch projects</button></li>
-				<li class="nav-item"><button class="nav-link rounded-pill" data-bs-target="#HTML"
-						data-bs-toggle="pill">HTML Canvas projects</button></li>
 			</ul>
 
 			<div class="tab-content">
-				<div class="tab-pane fade show active" id="scratch">
+				<div class="tab-pane fade" id="scratch">
 					<iframe src="https://scratch.mit.edu/projects/983866353/embed" width="485" height="402"></iframe>
 					<iframe src="https://scratch.mit.edu/projects/895961994/embed" width="485" height="402"></iframe>
 				</div>
 
-				<div class="tab-pane fade" id="HTML">
-					<canvas class="border border-dark" id="canvas1" width="400" height="300"></canvas>
-					<script>
-						const canvas = document.getElementById("canvas1");
-						let ctx = canvas.getContext('2d');
-						ctx.font = "50px Comic Sans MS";
-						// ctx.textAlign = "center";
-						let gradient = ctx.createLinearGradient(0,0,400,0)
-						gradient.addColorStop(0, "rgb(0,0,255)")
-						gradient.addColorStop(1, "rgb(255,0,0)")
-						ctx.fillStyle = gradient
-						ctx.fillText("Hello World!",50,150);
-					</script>
+				<div class="tab-pane fade show active" id="HTML">
+					<canvas class="border border-dark" id="canvas1" width="800" height="600"></canvas>
+					  <div class="btn-group">
+						<input class="btn-check" type="radio" name="pauseAnimation" id="pauseAnimation" checked>
+						<label class = "btn btn-outline-danger" for="pauseAnimation">Pause Animation</label>
+						<input class="btn-check" type="radio" name="playAnimation" id="playAnimation">
+						<label class = "btn btn-outline-success" for="playAnimation">Play Animation</label>
+					  </div>
 				</div>
 			</div>
 
@@ -88,6 +82,7 @@
 	<footer class="bg-dark text-light">
 		<div class="container py-2 pb-4">Done by Computhink Kids SG.</div>
 	</footer>
+	<script src="script/projects.js"></script>
 </body>
 
 </html>
